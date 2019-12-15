@@ -4,13 +4,16 @@
 body{
     background-color: $body-color;
 }
+@function font-height($n) {
+    @return $n * $font-varible;
+}
 @mixin botton-style($color-btn) {
     width: 120px;
     height: 40px;
     color: seashell;
     background-color: $color-btn;
     font-weight: bold;
-    font-size: 15px;
+    font-size: font-height(1);
     border: 0px;
     border-radius: 5px;
 }
@@ -55,7 +58,7 @@ body{
         color: $head-color;
         font-weight: bold;
         font-family: 'Source Sans Pro', sans-serif;
-        font-size: 60px;
+        font-size: font-height(4);
         width: 500px;
         position: absolute;
         top: 150px;
