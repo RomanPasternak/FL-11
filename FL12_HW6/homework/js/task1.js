@@ -9,12 +9,10 @@ let obj = {
 for(let k = 0; k < Object.keys(obj).length; k++){
     let iter;
     while(!isFinite(iter)){ 
-        if(iter !== undefined){
-            console.log('Invalid input data');
-        } 
         iter = prompt('Input ' + Object.keys(obj)[k]);
         if(Object.keys(obj)[k] === 'a' && iter === '0' || iter === null || iter === '' || isNaN(parseFloat(iter))){
             iter = 'aaa';
+            console.log('Invalid input data');
         }
     } 
     obj[Object.keys(obj)[k]] = parseFloat(iter);
