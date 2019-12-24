@@ -13,11 +13,11 @@ for(let k = 0; k < Object.keys(obj).length; k++){
         if(iter === null || iter === '' || isNaN(parseFloat(iter))){
             console.log('Invalid input data');
             alert('input values should be ONLY numbers')
-            iter = 'aaa';
+            iter = undefined;
         }
         if(iter === '0'){
             alert('A triangle must have 3 sides with a positive definite length ');
-            iter = 'aaa';
+            iter = undefined;
         }
     } 
     obj[Object.keys(obj)[k]] = parseInt(iter);
@@ -39,4 +39,5 @@ if(a + b > c && b + c > a && a + c > b){
     console.log('Triangle doesn’t exist');
     alert('Triangle doesn’t exist');
 }
+
 
