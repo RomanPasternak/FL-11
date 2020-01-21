@@ -1,4 +1,4 @@
-const myFighter = new Fighter({name: ‘Maximus, damage: 25, hp: 100, strength: 30, agility: 25}); 
+const myFighter = new Fighter({name: 'Maximus', damage: 25, hp: 100, strength: 30, agility: 25}); 
 class Fighter {
 
   constructor(name, damage, hp, strength, agility) {
