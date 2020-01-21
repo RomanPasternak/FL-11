@@ -12,3 +12,7 @@ class Fighter {
     console.log(this.name);
   }
 }
+
+function battle(){
+    console.log('-');
+}
