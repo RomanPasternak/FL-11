@@ -57,10 +57,7 @@ function pageSetup(sets) {
     }
 }
 
-function Set(nameValue, id) {
-    this.id = id
-    this.name = nameValue;
-}
+
 
 function createSetNode(set) {
     const newSetNode = document.createElement('div');
@@ -78,11 +75,7 @@ function createSetNode(set) {
     newSetNode.appendChild(removeBtn);
     rootNode.appendChild(newSetNode);
 
-    newSetNode.addEventListener('click', (event) => {
-        event.stopPropagation();
-        setStudied(newSetNode);
-    });
-
+    
     removeBtn.addEventListener('click', (event) => {
         event.stopPropagation();
         let sets = JSON.parse(localStorage.getItem(setName));
@@ -91,8 +84,7 @@ function createSetNode(set) {
                 sets.splice(i, 1);
             }
         }
-        localStorage.setItem(setNames, JSON.stringify(sets));
-        location.href = location.href.replace(location.hash, '');
+        
     });
 }
 
